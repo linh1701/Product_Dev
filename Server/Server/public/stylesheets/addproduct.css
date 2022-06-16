@@ -1,0 +1,72 @@
+.panel-body{
+    height: 600px;
+    width: 300px;
+    background-color: yellow;
+    border-radius: 5px;
+    border: 2px solid red;
+    margin-left: 450px;
+}
+.form-group input{
+    height: 20px;
+    width:200px;
+    margin-left: 50px;
+    margin-top: -5px;
+}
+.form-group input:hover{
+    height: 20px;
+    width:200px;
+    margin-left: 50px;
+    margin-top: -5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.form-group label p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 8px;
+}
+.form-group textarea{
+    height: 30px;
+    width:200px;
+    margin-left: 50px;
+    margin-top: -5px;
+}
+.form-group textarea:hover{
+    height: 30px;
+    width:200px;
+    margin-left: 50px;
+    margin-top: -5px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.form-group select{
+    height: 20px;
+    width:200px;
+    margin-left: 50px;
+    margin-top: -5px;
+}
+.form-control{
+    text-align: center;
+}
+.row button{
+    height: 40px;
+    width: 60px;
+    background-color: rgb(177, 177, 167);
+    margin-left: 125px;
+    margin-top: 20px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+.row button:hover{
+    height: 40px;
+    width: 60px;
+    background-color: rgb(205, 205, 199);
+    margin-left: 125px;
+    margin-top: 20px;
+    border: 2px solid rgb(0, 4, 255);
+    border-radius: 5px;
+}
+.row button p{
+    margin-top: 5px;
+    font-size: 18px;
+}

@@ -1,0 +1,58 @@
+.form_all_login{
+    height: 300px;
+    width: 250px;
+    background-color: yellow;
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 0, 0);
+}
+.form-group_login label p{
+    margin-top: -15px;
+}
+.form-group_login input{
+    margin-left: 20px;
+    margin-top: -20px;
+    height: 30px;
+    width: 200px;
+}
+.form-group_login input:hover{
+    margin-left: 20px;
+    margin-top: -20px;
+    height: 30px;
+    width: 200px;
+    background-color: aqua;
+}
+.form-group_login label{
+    margin-left: 20px;
+    margin-top: -50px;
+    font-size: 20px;
+    color: blue ;
+}
+.form-group_login p{
+    text-align: center;
+}
+.form-group_login h3{
+    text-align: center;
+}
+.form-group_login h3:hover{
+    text-align: center;
+    color:red;
+}
+.form_all_login button{
+    margin-left: 95px;
+    margin-top: 25px;
+    border: 2px solid red;
+    height: 30px;
+    width: 60px;
+    border-radius: 10px;
+}
+.form_all_login button:hover{
+    margin-left: 95px;
+    margin-top: 25px;
+    border: 2px solid rgb(0, 30, 255);
+    height: 30px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: aqua  ;
+    font-size: 17px;
+}

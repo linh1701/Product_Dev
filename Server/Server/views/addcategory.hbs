@@ -1,0 +1,73 @@
+<div class="content-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        Compose a Message
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" method="post" action="/danh-muc"
+                        >
+                            <div class="form-group">
+                                <label>Tên danh mục</label>
+                                <input class="form-control"  type="text" name="name" id="name" onchange="validation()"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Mô tả</label>
+                                <textarea class="form-control" name="description" id="description" onchange="validation()"></textarea>
+                            </div>
+                            <div class="row"> 
+                                <div class="col-md-4"></div>
+                                <div class="col-md-5">
+                                    <button type="submit" disabled id="submit" class="btn btn-success">Lưu</button>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <!--/.ROW-->
+    </div>
+</div>
+<!-- CONTENT-WRAPPER SECTION END-->
+<section class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                &copy; 2014 Yourdomain.com |<a href="http://www.binarytheme.com/" target="_blank"> Designed by :
+                    binarytheme.com</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+
+   const validation = () =>{
+       const name = document.getElementById('name').value;
+       const description = document.getElementById('description').value;
+       const submit = document.getElementById('submit');
+
+       if(!name || name.trim().length == 0){
+           submit.disabled = true;
+       }else{
+           submit.disabled = false;
+       }
+       
+       if(!description || description.trim().length == 0){
+           submit.disabled = true;
+       }else{
+           submit.disabled = false;
+       }
+   }
+</script>
