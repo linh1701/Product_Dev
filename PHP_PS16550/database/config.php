@@ -1,10 +1,10 @@
 <?php
 class DatabaseConfig
 {
-    private $host = "10.82.74.26:3307";
+    private $host = "192.168.1.2:3307";
     private $username = "root";
     private $password = "";
-    private $database = "db_asm_network";
+    private $database = "db_sanpham";
     public $connection;
     public function getConnection()
     {

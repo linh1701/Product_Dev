@@ -16,32 +16,12 @@ class ProductController {
         return $this->product_service->getOneProduct($id);
     }
 
-    public function getOneCategories($id){
-        return $this->product_service->getOneCategories($id);
+    public function insertProduct($name, $price, $quantity){
+        return $this->product_service->insertProduct($name, $price, $quantity);
     }
 
-    public function getCategories(){
-        return $this->product_service->getCategories();
-    }
-
-    public function insertCategories($name, $image){
-        return $this->product_service->insertCategories($name,$image);
-    }
-
-    public function updateCategories($id, $name, $image){
-        return $this->product_service->updateCategories($id, $name, $image);
-    }
-
-    public function deleteCategories($id){
-        return $this->product_service->deleteCategories($id);
-    }
-
-    public function insertProduct($name, $price, $quantity, $image, $category_id){
-        return $this->product_service->insertProduct($name, $price, $quantity, $image, $category_id);
-    }
-
-    public function updateProduct($id, $name, $price, $quantity, $image, $category_id){
-        return $this->product_service->updateProduct($id, $name, $price, $quantity, $image, $category_id);
+    public function updateProduct($id, $name, $price, $quantity){
+        return $this->product_service->updateProduct($id, $name, $price, $quantity);
     }
 
     public function deleteProduct($id){
