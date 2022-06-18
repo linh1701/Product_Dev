@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -45,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
         fabInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(this, InsertProductActivity.class);
-//                startActivity(intent);
-//                getActivity().finish();
+                Intent intent = new Intent(MainActivity.this, InsertProductActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
