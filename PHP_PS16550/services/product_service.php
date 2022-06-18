@@ -14,7 +14,7 @@ class ProductService {
 
     public function getAllProducts(){
         try {
-            $query = "select id, name, price, quantity "
+            $query = "select id, name, price, quantity from "
                                                 . $this->tblProducts;
             $stmt = $this->connection->prepare($query);
             $stmt->execute();
@@ -66,8 +66,8 @@ class ProductService {
     public function insertProduct( $name, $price, $quantity){
         try {
             $query = "insert into " . $this->tblProducts . 
-            " (name, price, quantity, image, category_id) 
-                values (:name, :price, :quantity, :image, :category_id)";
+            " (name, price, quantity) 
+                values (:name, :price, :quantity)";
             $stmt = $this->connection->prepare($query);
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':price', $price);
@@ -90,8 +90,7 @@ class ProductService {
     public function updateProduct($id,$name, $price, $quantity){
         try {
             $query = "update " . $this->tblProducts .
-            " set name=:name, price=:price, quantity=:quantity, 
-            image=:image, category_id=:category_id where id=:id";
+            " set name=:name, price=:price, quantity=:quantity where id=:id";
             $stmt = $this->connection->prepare($query);
             $stmt->bindParam(':id', $id);
             $stmt->bindParam(':name', $name);

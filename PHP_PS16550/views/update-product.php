@@ -12,10 +12,8 @@ $id = $body->id;
 $name = $body->name;
 $price = $body->price;
 $quantity = $body->quantity;
-$image = $body->image;
-$category_id = $body->category_id;
 
-$result = (new ProductController())->updateProduct($id, $name, $price, $quantity, $image, $category_id);
+$result = (new ProductController())->updateProduct($id, $name, $price, $quantity);
 
 http_response_code(200);
 echo json_encode(array(
