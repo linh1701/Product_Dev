@@ -1,7 +1,7 @@
 <?php
 class DatabaseConfig
 {
-    private $host = "192.168.1.2:3307";
+    private $host = "10.82.69.33:3307";
     private $username = "root";
     private $password = "";
     private $database = "db_sanpham";

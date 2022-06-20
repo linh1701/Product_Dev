@@ -8,8 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bv_asm_networking.Adapter.ItemClickListener;
 import com.example.bv_asm_networking.R;
-import com.example.fastfood.Adapter.ItemClickListener;
 
 public class RvProductViewHolder extends RecyclerView.ViewHolder {
     public static ItemClickListener itemEditClickstener;
@@ -25,27 +25,25 @@ public class RvProductViewHolder extends RecyclerView.ViewHolder {
         this.tvPrice = view.findViewById(R.id.tvGia);
         this.tvQuantity = view.findViewById(R.id.tvSL);
 //        this.imageView = view.findViewById(R.id.imageProduct);
-//        this.layout_swipe = view.findViewById(R.id.layout_swipe);
-//        this.swipeRevealLayout = view.findViewById(R.id.swipeReveallayout);
-//        this.ivDelete = view.findViewById(R.id.ivDelete);
-//        this.ivUpdate = view.findViewById(R.id.ivUpdate);
+        this.ivDelete = view.findViewById(R.id.ivDelete);
+        this.ivUpdate = view.findViewById(R.id.ivEdit);
 
-//        ivDelete.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (itemDeleteClickstener != null){
-//                    itemDeleteClickstener.onItemClick(position);
-//                }
-//            }
-//        });
-//
-//        ivUpdate.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (itemEditClickstener != null){
-//                    itemEditClickstener.onItemClick(position);
-//                }
-//            }
-//        });
+        ivDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (itemDeleteClickstener != null){
+                    itemDeleteClickstener.onItemClick(position);
+                }
+            }
+        });
+
+        ivUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (itemEditClickstener != null){
+                    itemEditClickstener.onItemClick(position);
+                }
+            }
+        });
     }
 }

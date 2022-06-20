@@ -55,13 +55,13 @@ public class ProductAdapter extends RecyclerView.Adapter<RvProductViewHolder> {
         return data.get(position);
     }
 
-//    public void setOnItemEditClickstener(ItemClickListener itemEditClickstener) {
-//        RvProductViewHolder.itemEditClickstener = itemEditClickstener;
-//    }
-//
-//    public void setOnItemDeleteClickstener(ItemClickListener itemDeleteClickstener) {
-//        RvProductViewHolder.itemDeleteClickstener = itemDeleteClickstener;
-//    }
+    public void setOnItemEditClickstener(ItemClickListener itemEditClickstener) {
+        RvProductViewHolder.itemEditClickstener = itemEditClickstener;
+    }
+
+    public void setOnItemDeleteClickstener(ItemClickListener itemDeleteClickstener) {
+        RvProductViewHolder.itemDeleteClickstener = itemDeleteClickstener;
+    }
 
     @Override
     public int getItemCount() {

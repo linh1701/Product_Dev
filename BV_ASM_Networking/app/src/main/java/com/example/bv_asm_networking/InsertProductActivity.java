@@ -25,7 +25,7 @@ import retrofit2.Response;
 
 public class InsertProductActivity extends AppCompatActivity {
     IRetrofitService service;
-    EditText edPrice, edname, edquantity, edcaterory_id;
+    EditText edPrice, edname, edquantity;
     Button btnLuu;
     public Integer productId;
     @Override
@@ -111,7 +111,7 @@ public class InsertProductActivity extends AppCompatActivity {
         public void onResponse(Call<Product> call, Response<Product> response) {
             if (response.isSuccessful()) {
                 Product result = response.body();
-                edname.setText(result.getName());
+                edname.setText(result.getName()+"");
                 edPrice.setText(result.getPrice()+"");
                 edquantity.setText(result.getQuantity()+"");
 ////                edcaterory_id.setText(result.getCategory_id()+"");

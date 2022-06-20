@@ -8,7 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
+import com.example.bv_asm_networking.Adapter.ItemClickListener;
 import com.example.bv_asm_networking.Adapter.ProductAdapter;
 import com.example.bv_asm_networking.Retrofits.IRetrofitService;
 import com.example.bv_asm_networking.Retrofits.RetrofitBuider;
@@ -51,6 +53,24 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        adapter.setOnItemEditClickstener(new ItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Product product = (Product) adapter.getItem(position);
+                Intent intent = new Intent(MainActivity.this, InsertProductActivity.class);
+                intent.putExtra("id", product.getId());
+                startActivity(intent);
+            }
+        });
+
+        adapter.setOnItemDeleteClickstener(new ItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Product product = (Product) adapter.getItem(position);
+                service.deleteOneProduct(product.getId()).enqueue(deleteProduct);
+            }
+        });
     }
 
     @Override
@@ -75,6 +95,22 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onFailure(Call<List<Product>> call, Throwable t) {
             Log.d(">>> register", "onFailure"+ t.getMessage());
+        }
+    };
+
+    Callback<Product> deleteProduct = new Callback<Product>() {
+        @Override
+        public void onResponse(Call<Product> call, Response<Product> response) {
+            if (response.isSuccessful()) {
+                Product result = response.body();
+                Toast.makeText(MainActivity.this, "Delete successssfuly", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
+
+        @Override
+        public void onFailure(Call<Product> call, Throwable t) {
+            Log.d(">>> delete", "onFailure"+ t.getMessage());
         }
     };
 }
