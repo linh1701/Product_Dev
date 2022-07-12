@@ -12,20 +12,8 @@ class ProductController {
         return $this->product_service->getAllProducts();
     }
 
-    public function getOneProduct($id){
-        return $this->product_service->getOneProduct($id);
-    }
-
-    public function insertProduct($name, $price, $quantity){
-        return $this->product_service->insertProduct($name, $price, $quantity);
-    }
-
-    public function updateProduct($id, $name, $price, $quantity){
-        return $this->product_service->updateProduct($id, $name, $price, $quantity);
-    }
-
-    public function deleteProduct($id){
-        return $this->product_service->deleteProduct($id);
+    public function insertProduct($name, $price){
+        return $this->product_service->insertProduct($name, $price);
     }
 }
 ?>

@@ -12,22 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="176dp"
         android:hint="Tên sản phẩm"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edQuantity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="số lượng"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edPrice" />
 
     <EditText
         android:id="@+id/edPrice"
@@ -36,6 +26,7 @@
         android:layout_marginTop="12dp"
         android:hint="Giá tiền"
         android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,16 +36,31 @@
         android:id="@+id/btnLuu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="272dp"
         android:layout_weight="1"
         android:insetRight="5dp"
-        android:text="Lưu"
-        android:textColor="@color/black"
-        app:backgroundTint="@android:color/holo_red_light"
+        android:text="Thêm mới"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/edPrice"
         app:layout_constraintVertical_bias="0.23" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Thêm sản phẩm"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

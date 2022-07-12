@@ -4,15 +4,13 @@ public class ProductRequest {
     private Integer id;
     private String name;
     private  Float price;
-    private Integer quantity;
 
     public  ProductRequest(){}
 
-    public ProductRequest(Integer id, String name, Float price, Integer quantity) {
+    public ProductRequest(Integer id, String name, Float price) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.quantity = quantity;
     }
 
     public Integer getId() {
@@ -23,10 +21,9 @@ public class ProductRequest {
         this.id = id;
     }
 
-    public ProductRequest(String name, Float price, Integer quantity) {
+    public ProductRequest(String name, Float price) {
         this.name = name;
         this.price = price;
-        this.quantity = quantity;
     }
 
     public String getName() {
@@ -45,12 +42,5 @@ public class ProductRequest {
         this.price = price;
     }
 
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
 
 }

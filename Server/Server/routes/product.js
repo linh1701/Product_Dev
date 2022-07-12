@@ -63,7 +63,7 @@ router.put("/", function (req, res, next) {
   let { body, file, params } = req;
   delete body.image;
   if (file) {
-      let image = `http://10.82.151.64:3000/images/${file.filename}`;
+      let image = `http://192.168.1.2:3000/images/${file.filename}`;
       body = { ...body, image: image }
   }
   await productController.update(params.id, body);
@@ -104,7 +104,7 @@ router.post(
     let { body, file } = req;
     let image = "";
     if (file) {
-      image = `http://10.82.151.64:3000/images/${file.filename}`;
+      image = `http://192.168.1.2:3000/images/${file.filename}`;
     }
     body = { ...body, image: image };
     console.log(">>>>>>>>>", body);

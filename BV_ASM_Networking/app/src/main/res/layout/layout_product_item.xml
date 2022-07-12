@@ -28,36 +28,5 @@
         app:layout_constraintStart_toStartOf="@+id/tvTen"
         app:layout_constraintTop_toBottomOf="@+id/tvTen" />
 
-    <TextView
-        android:id="@+id/tvSL"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvTen"
-        app:layout_constraintTop_toBottomOf="@+id/tvGia" />
-
-    <ImageView
-        android:id="@+id/ivEdit"
-        android:layout_width="31dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_edit" />
-
-    <ImageView
-        android:id="@+id/ivDelete"
-        android:layout_width="32dp"
-        android:layout_height="29dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ivEdit"
-        app:layout_constraintTop_toBottomOf="@+id/ivEdit"
-        app:layout_constraintVertical_bias="0.324"
-        app:srcCompat="@drawable/ic_delete" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

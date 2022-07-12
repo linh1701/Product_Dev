@@ -43,8 +43,6 @@ public class ProductAdapter extends RecyclerView.Adapter<RvProductViewHolder> {
         Product product = data.get(position);
         holder.tvName.setText(product.getName()+"");
         holder.tvPrice.setText(product.getPrice()+" VND");
-        holder.tvQuantity.setText(product.getQuantity()+" sp");
-//        Glide.with(context).load(product.getImage()).into(holder.imageView);
         holder.position = position;
     }
 
@@ -55,13 +53,6 @@ public class ProductAdapter extends RecyclerView.Adapter<RvProductViewHolder> {
         return data.get(position);
     }
 
-    public void setOnItemEditClickstener(ItemClickListener itemEditClickstener) {
-        RvProductViewHolder.itemEditClickstener = itemEditClickstener;
-    }
-
-    public void setOnItemDeleteClickstener(ItemClickListener itemDeleteClickstener) {
-        RvProductViewHolder.itemDeleteClickstener = itemDeleteClickstener;
-    }
 
     @Override
     public int getItemCount() {

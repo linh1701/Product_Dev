@@ -2,8 +2,6 @@ package com.example.bv_asm_networking.Retrofits;
 import com.example.bv_asm_networking.Requests.ProductRequest;
 import com.example.bv_asm_networking.Responses.ProductResponses;
 import com.example.bv_asm_networking.model.Product;
-import com.example.fastfood.Requests.UploadRequest;
-import com.example.fastfood.Responses.UploadResponses;
 
 
 import java.util.List;
@@ -23,8 +21,6 @@ public interface IRetrofitService {
     Call<ProductResponses> updateProduct(@Body ProductRequest body);
 
 
-    @POST("/views/upload.php")
-    Call<UploadResponses> upload(@Body UploadRequest body);
 // viiew product
     @GET("/views/getAllProduct.php")
     Call<List<Product>> getAllProduct();

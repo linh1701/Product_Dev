@@ -10,9 +10,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/controllers/product_controller.php';
 $body = json_decode(file_get_contents("php://input"));
 $name = $body->name;
 $price = $body->price;
-$quantity = $body->quantity;
 
-$result = (new ProductController())->insertProduct($name, $price, $quantity);
+$result = (new ProductController())->insertProduct($name, $price);
 
 http_response_code(200);
 echo json_encode(array(
